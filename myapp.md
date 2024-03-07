@@ -21,11 +21,11 @@ ENV NAME World
 # Run app.py when the container launches
 CMD ["python", "app.py"]
 ````
-Building an Image - Use the docker build command to create the image.
+2.Building an Image - Use the docker build command to create the image.
 ````
 docker build -t myapp .
 ````
-Instantiating Containers - Run the built image with ````docker run to spawn a container.
+3.Instantiating Containers - Run the built image with ````docker run to spawn a container.
 ````
 # Run a single command within a new container
 docker run myapp python my_script.py
@@ -33,18 +33,18 @@ docker run myapp python my_script.py
 docker run -d -it --name mycontainer myapp /bin/bash
 ````
 
-Viewing Containers - The ````docker container ls```` or ````docker ps```` commands display active containers.
+4.Viewing Containers - The ````docker container ls```` or ````docker ps```` commands display active containers.
 
-Modifying Containers - As an example, you can change the content of a container by entering in via ````docker exec````.
+5.Modifying Containers - As an example, you can change the content of a container by entering in via ````docker exec````.
 ````
 docker exec -it mycontainer /bin/bash
 ````
-Stopping and Removing Containers - This can be done using the ````docker stop```` and ````docker rm``` commands or combined with the ````-f``` flag.
+6.Stopping and Removing Containers - This can be done using the ````docker stop```` and ````docker rm``` commands or combined with the ````-f``` flag.
 ````
 docker stop mycontainer
 docker rm mycontainer
 ````
-Cleaning Up Images - Remove any unused images to save storage space.
+7.Cleaning Up Images - Remove any unused images to save storage space.
 ````
 docker image prune -a
 ````
